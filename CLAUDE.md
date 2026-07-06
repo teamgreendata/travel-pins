@@ -2,7 +2,18 @@
 
 # Travel Pins
 
-Map-based web app — Next.js + Supabase + MapLibre GL.
+Map-based web app — Next.js 16 + React 19 + Supabase (`@supabase/ssr`) + MapLibre GL + Tailwind v4.
+Start with `travel-map-app-handoff.md` (the build spec) and `docs/` before writing code; auth
+gate is `proxy.ts` (Next 16 middleware rename), Supabase config in `supabase/`.
+
+```bash
+npm run dev      # dev server
+npm run build    # production build
+npm run lint     # eslint
+```
+
+> This brief is thin — as systems ship, fold decisions and gotchas back here per the baseline
+> conventions below.
 
 <!-- BEGIN:baseline-conventions (synced by scripts/sync-baseline.py — edit blocks there, then re-run) -->
 ## Baseline conventions
