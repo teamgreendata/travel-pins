@@ -1,6 +1,8 @@
 # Travel Pins — Phase 2 Plan (Social + Sharing)
 
-**Status:** proposed; not started. Phase 1 is complete on `master` (6 commits).
+**Status:** shipped — P2-M1 through P2-M5 are implemented on `main` (routes `/friends`,
+`/u/[username]`, `/u/[username]/overlap`, `/s/[slug]`; migrations `0007`–`0011`). Only
+P2-M6 (PNG export) remains deferred. This doc is kept as the design record.
 **Source of truth:** `travel-map-app-handoff.md` §3, §6, §9, §10, §11, §12.
 
 ## Context
