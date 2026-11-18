@@ -15,6 +15,15 @@ npm run lint     # eslint
 > This brief is thin — as systems ship, fold decisions and gotchas back here per the baseline
 > conventions below.
 
+## Security headers
+
+`next.config.ts` `headers()` sets `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`,
+`Referrer-Policy: strict-origin-when-cross-origin`, `Permissions-Policy: camera=(),
+microphone=(), geolocation=()` and `X-DNS-Prefetch-Control: off` on every route (2026-11-18).
+HSTS is Vercel's own on `*.vercel.app`. Two consequences: a shared map cannot be embedded in an
+iframe on another site, and a "locate me" control needs `geolocation=(self)` in the same commit
+(the browser refuses the prompt silently otherwise). No CSP yet — see `BACKLOG.md`.
+
 <!-- BEGIN:baseline-conventions (synced by scripts/sync-baseline.py — edit blocks there, then re-run) -->
 ## Baseline conventions
 
